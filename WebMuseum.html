@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Museum Tank Interaktif</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: url("tank.gif") no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+      }
+
+      /* LOBBY */
+      #lobby {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.8);
+        animation: fadeIn 2s ease;
+      }
+
+      #lobby img {
+        width: 300px;
+        margin-bottom: 20px;
+        animation: float 3s infinite;
+      }
+
+      #playBtn {
+        padding: 15px 40px;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        background: limegreen;
+        color: black;
+        cursor: pointer;
+        animation: pulse 1.5s infinite;
+      }
+
+      #content {
+        display: none;
+        padding: 20px;
+        animation: fadeIn 2s ease;
+      }
+
+      header {
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 15px;
+        animation: slideDown 1s ease;
+      }
+    /* Css */
+    section {
+        background: rgba(0, 0, 0, 0.7);
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 800px;
+        animation: fadeInUp 1.5s ease;
+      }
+
+      section img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 20px cyan;
+        margin: 15px 0;
+        animation: float 4s infinite;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.7);
+      }
+
+      /* ANIMATIONS */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes slideDown {
+        from {
+          transform: translateY(-100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 5px lime;
+        }
+        50% {
+          box-shadow: 0 0 20px lime;
+        }
+        100% {
+          box-shadow: 0 0 5px lime;
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- LOBBY -->
+    <div id="lobby">
+      <img src="logo.png" alt="Logo Museum" />
+      <h1>MUSEUM TANK</h1>
+      <button id="playBtn" onclick="startSite()">▶ PLAY</button>
+    </div>
+
+    <!-- CONTENT -->
+    <div id="content">
+      <header>
+        <h1>Koleksi tank Dunia</h1>
+      </header>
+
+      <section>
+        <h2>M1A1 Abrams</h2>
+        <img src="Abrams.jpg" alt="M1A1 Abrams" />
+        <p>
+          M1A1 Abrams adalah tank tempur utama (MBT) generasi ketiga Amerika
+          Serikat yang diproduksi oleh General Dynamics, menonjol dengan meriam
+          120 mm M256, pelindung komposit Chobham/uranium terdeplesi, dan mesin
+          turbin gas 1.500 hp. Mulai digunakan tahun 1986, tank ini dirancang
+          untuk ketahanan tinggi, mobilitas, dan daya hancur, serta digunakan
+          dalam berbagai konflik.
+        </p>
+      </section>
+
+      <section>
+        <h2>T-90</h2>
+        <img src="T90.jpg" alt="T-90" . />
+        <p>
+          T-90 adalah tank tempur utama (MBT) generasi ketiga Rusia yang
+          dikembangkan dari T-72, menggabungkan teknologi T-80U dengan mesin
+          yang ditingkatkan dan perlindungan lapis baja reaktif Kontakt-5.
+          Diproduksi oleh Uralvagonzavod, T-90 dilengkapi meriam 125mm, sistem
+          Shtora-1, dan digunakan secara luas dalam konflik modern, dengan
+          varian modernisasi T-90M "Proryv-3" sebagai salah satu yang tercanggih
+          di AD Rusia.
+        </p>
+      </section>
+
+      <section>
+        <h2>Leopard 2</h2>
+        <img src="Leopard.jpg" alt="Leopard 2" />
+        <p>
+          Leopard 2 adalah tank tempur utama (MBT) generasi ketiga Jerman
+          .Dikembangkan oleh Krauss - Maffei pada tahun 1970-an, tank ini mulai
+          beroperasi pada tahun 1979 dan menggantikan Leopard 1 sebelumnya
+          sebagai tank tempur utama angkatan darat Jerman Barat . Berbagai
+          iterasi Leopard 2 terus dioperasikan oleh angkatan bersenjata Jerman ,
+          serta 13 negara Eropa lainnya, dan beberapa negara non-Eropa, termasuk
+          Kanada, Chili, Indonesia, dan Singapura. Beberapa negara yang mengope
+          rasikannya telah memperoleh lisensi desain Leopard 2 untuk produksi
+          lokal dan pengembangan dalam negeri.
+        </p>
+      </section>
+
+      <section>
+        <h2>Panzer VIII Maus</h2>
+        <img src="Maus.jpg" alt="Maus" />
+        <p>
+          Panzerkampfwagen VIII Maus adalah tank super berat Jerman Nazi pada
+          Perang Dunia II, yang dikenal sebagai kendaraan tempur berlapis baja
+          terberat (188 ton) dan terbesar yang pernah dibuat. Dirancang oleh
+          Ferdinand Porsche atas perintah Hitler, Maus bertujuan menjadi
+          "benteng bergerak" dengan armor hingga 215 mm dan meriam utama 128 mm,
+          namun hanya dua prototipe yang selesai. Karena bobotnya, tank ini
+          sangat lambat dan gagal diproduksi massal.
+        </p>
+      </section>
+
+      <section>
+        <h2>P.1000 Ratte</h2>
+        <img src="Ratte.jpg" alt="P.1000 Ratte" />
+        <p>
+          Panzerkampfwagen P.1000 Ratte adalah desain tank super berat Jerman
+          yang tidak pernah dibangun. Dirancang dengan berat sekitar 1.000 ton,
+          kendaraan ini akan membawa meriam kapal perang dan perlindungan baja
+          ekstrem. Proyek ini dibatalkan karena dianggap tidak praktis, tetapi
+          tetap menjadi salah satu konsep kendaraan militer paling ekstrem dalam
+          sejarah.
+        </p>
+      </section>
+
+      <footer>Dibuat oleh: Fadil A. - 20029</footer>
+    </div>
+
+    <script>
+      function startSite() {
+        document.getElementById("lobby").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      }
+    </script>
+  </body>
+</html>

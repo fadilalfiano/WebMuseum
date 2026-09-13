@@ -1,0 +1,11 @@
+# Folder pengaturan VS Code
+.vscode/
+
+# File sampah sistem operasi
+.DS_Store
+Thumbs.db
+
+# Node modules & file environment (jika nanti pakai JavaScript/Node.js)
+node_modules/
+*.log
+.env
